@@ -1,0 +1,1291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  z-index: 10;
+  /* Ensure buttons are on top */
+  width: 40px;
+  /* Button width */
+  height: 40px;
+  /* Button height */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Background color */
+  border-radius: 50%;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* how it works style */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+.how-it-works-wrapper {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 100px 24px 20px
+}
+
+@media screen and (max-width: 960px) {
+  .how-it-works-wrapper {
+    padding-top: 56px;
+    padding-bottom: 40px
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .how-it-works-wrapper {
+    padding: 56px 16px
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .how-it-works-wrapper {
+    padding-left: 0;
+    padding-right: 0
+  }
+}
+
+.how-it-works {
+  background: #f7f7f7;
+  position: relative
+}
+
+.how-it-works:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  height: 64px;
+  background-color: #f7f7f7;
+  -webkit-mask-image: url(https://printify.com/pfh/media/arrow-down-S7NHO6CI.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(https://printify.com/pfh/media/arrow-down-S7NHO6CI.svg);
+  mask-repeat: no-repeat
+}
+
+@media screen and (max-width: 960px) {
+  .how-it-works:after {
+    width: 112px;
+    height: 24px
+  }
+}
+
+.how-it-works__short-description {
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+  overflow: hidden
+}
+
+.how-it-works__main-image {
+  align-self: flex-end;
+  z-index: 1;
+  position: relative;
+  width: 39.5%;
+  height: 0;
+  padding-top: 55.5%;
+  border-radius: 20px;
+  background-image: url(https://printify.com/pfh/media/clothes-C4MUJFTZ.png);
+  background-image: image-set(url(https://printify.com/pfh/media/clothes-CMPWJ6JG.webp), url(https://printify.com/pfh/media/clothes-C4MUJFTZ.png));
+  background-image: -webkit-image-set(url(https://printify.com/pfh/media/clothes-CMPWJ6JG.webp), url(https://printify.com/pfh/media/clothes-C4MUJFTZ.png));
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #18c75a;
+  background-size: 100% 100%
+}
+
+.how-it-works__main-image:before {
+  content: "";
+  position: absolute;
+  inset: 0 -1px 0 0;
+  background: url(https://printify.com/pfh/media/clothes-bottom-53OO5ML3.svg) no-repeat bottom -1px right;
+  background-size: 78%;
+  border-bottom-right-radius: 20px
+}
+
+.how-it-works__designing {
+  width: 278px;
+  height: 366.57px;
+  bottom: 0;
+  right: -25%;
+  position: absolute
+}
+
+.how-it-works__overview {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 7% 9% 13.5% 57%;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 20px
+}
+
+.how-it-works__overview-description {
+  color: #485256;
+  padding-top: 32px;
+  padding-bottom: 48px;
+  opacity: .7
+}
+
+.how-it-works__overview-title {
+  color: #17262b;
+  font-size: 32px
+}
+
+.how-it-works__products {
+  font-weight: 500;
+  position: relative
+}
+
+.how-it-works__products:before {
+  content: "";
+  position: absolute;
+  background: url(https://printify.com/pfh/media/link-arrow-A6VZADMD.svg) no-repeat center center;
+  width: 16px;
+  height: 16px;
+  right: -25px;
+  top: 2px
+}
+
+@media screen and (max-width: 960px) {
+  .how-it-works__products:before {
+    width: 24px;
+    right: -30px;
+    background: url(https://printify.com/pfh/media/link-arrow-mobile-HKJABRI2.svg) no-repeat center center
+  }
+}
+
+.how-it-works__product-links {
+  position: absolute;
+  inset: 0
+}
+
+.how-it-works__product-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: #4bc6594d;
+  -webkit-backdrop-filter: blur(5.98022px);
+  backdrop-filter: blur(5.98022px);
+  border-radius: 20px;
+  transition: transform .3s
+}
+
+.how-it-works__product-link:before {
+  content: "";
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://printify.com/pfh/media/plus-PSA4MA42.svg) no-repeat center center, #4bc6594d;
+  -webkit-backdrop-filter: blur(5.98022px);
+  backdrop-filter: blur(5.98022px);
+  border-radius: 20px
+}
+
+.how-it-works__product-link:hover {
+  transform: translate(-50%, -50%) scale(1.1)
+}
+
+.how-it-works__product-mug {
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: 25%;
+  left: 11%;
+  transform: translate(-50%, -50%)
+}
+
+.how-it-works__product-mug:before {
+  width: 25px;
+  height: 25px
+}
+
+.how-it-works__product-hat-1 {
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  top: 18%;
+  left: 95%;
+  transform: translate(-50%, -50%)
+}
+
+.how-it-works__product-hat-1:before {
+  width: 19px;
+  height: 19px
+}
+
+.how-it-works__product-phone {
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: 30%;
+  left: 58%;
+  transform: translate(-50%, -50%)
+}
+
+.how-it-works__product-phone:before {
+  width: 25px;
+  height: 25px
+}
+
+.how-it-works__product-hat-2 {
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  top: 60%;
+  left: 34%;
+  transform: translate(-50%, -50%)
+}
+
+.how-it-works__product-hat-2:before {
+  width: 19px;
+  height: 19px
+}
+
+.how-it-works__product-socks {
+  width: 29px;
+  height: 29px;
+  position: absolute;
+  top: 88%;
+  left: 52%;
+  transform: translate(-50%, -50%)
+}
+
+.how-it-works__product-socks:before {
+  width: 19px;
+  height: 19px
+}
+
+.how-it-works__product-hoodie {
+  width: 37px;
+  height: 37px;
+  position: absolute;
+  top: 93%;
+  left: 12%;
+  transform: translate(-50%, -50%)
+}
+
+.how-it-works__product-hoodie:before {
+  width: 25px;
+  height: 25px
+}
+
+.how-it-works__t-shirt {
+  display: none
+}
+
+.how-it-works__description {
+  padding: 120px 40px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden
+}
+
+.how-it-works__description-item {
+  padding-right: 64px;
+  flex-grow: 1;
+  flex-basis: 0
+}
+
+.how-it-works__description-item:last-of-type {
+  padding-right: 0
+}
+
+.how-it-works__description-title-1 {
+  padding-top: 40px;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 24px;
+  color: #29ab51
+}
+
+.how-it-works__description-title-2 {
+  font-size: 24px;
+  line-height: 32px;
+  color: #17262b
+}
+
+.how-it-works__description-text {
+  padding-top: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #485256
+}
+
+@media screen and (max-width: 960px) {
+  .how-it-works__short-description {
+    flex-direction: column;
+    max-width: 552px;
+    background: #fff;
+    border-radius: 24px;
+    margin: 0 auto
+  }
+
+  .how-it-works__products {
+    font-weight: 400
+  }
+
+  .how-it-works__overview {
+    position: static;
+    padding: 31px 24px 40px;
+    border-top-left-radius: initial;
+    border-top-right-radius: initial
+  }
+
+  .how-it-works__overview-description {
+    padding: 24px 0 34px
+  }
+
+  .how-it-works__overview-title {
+    padding-right: 65px
+  }
+
+  .how-it-works__designing {
+    display: none
+  }
+
+  .how-it-works__main-image {
+    width: 100%;
+    padding-top: 65.5%;
+    border-radius: 24px;
+    background-image: url(https://printify.com/pfh/media/clothes-mobile-ONMUWJFE.png);
+    background-image: image-set(url(https://printify.com/pfh/media/clothes-mobile-Q6UN6X6P.webp), url(https://printify.com/pfh/media/clothes-mobile-ONMUWJFE.png));
+    background-image: -webkit-image-set(url(https://printify.com/pfh/media/clothes-mobile-Q6UN6X6P.webp), url(https://printify.com/pfh/media/clothes-mobile-ONMUWJFE.png));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #18c75a;
+    background-size: 100% 100%
+  }
+
+  .how-it-works__main-image:before {
+    background-size: 64%
+  }
+
+  .how-it-works__product-mug {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 17%;
+    left: 12.5%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-mug:before {
+    width: 27px;
+    height: 27px
+  }
+
+  .how-it-works__product-hat-1 {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 7%;
+    left: 71%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-hat-1:before {
+    width: 27px;
+    height: 27px
+  }
+
+  .how-it-works__product-phone {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 21%;
+    left: 43%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-phone:before {
+    width: 27px;
+    height: 27px
+  }
+
+  .how-it-works__product-hat-2 {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 67%;
+    left: 28%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-hat-2:before {
+    width: 27px;
+    height: 27px
+  }
+
+  .how-it-works__product-hoodie {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 93%;
+    left: 16%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-hoodie:before {
+    width: 27px;
+    height: 27px
+  }
+
+  .how-it-works__t-shirt {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 65%;
+    left: 57%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__t-shirt:before {
+    width: 27px;
+    height: 27px
+  }
+
+  .how-it-works__product-socks {
+    display: none
+  }
+
+  .how-it-works__description {
+    max-width: 312px;
+    padding: 38px 0 0
+  }
+
+  .how-it-works__description-item {
+    padding: 0;
+    flex-basis: initial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  }
+
+  .how-it-works__description-text {
+    padding-top: 8px;
+    text-align: center
+  }
+
+  .how-it-works__description-title-1 {
+    padding-top: 24px
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .how-it-works__product-link:before {
+    background-size: 10px
+  }
+
+  .how-it-works__product-mug {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 17%;
+    left: 12.5%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-mug:before {
+    width: 22px;
+    height: 22px
+  }
+
+  .how-it-works__product-hat-1 {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 7%;
+    left: 71%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-hat-1:before {
+    width: 22px;
+    height: 22px
+  }
+
+  .how-it-works__product-phone {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 21%;
+    left: 43%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-phone:before {
+    width: 22px;
+    height: 22px
+  }
+
+  .how-it-works__product-hat-2 {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 67%;
+    left: 28%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-hat-2:before {
+    width: 22px;
+    height: 22px
+  }
+
+  .how-it-works__product-hoodie {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 93%;
+    left: 16%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-hoodie:before {
+    width: 22px;
+    height: 22px
+  }
+
+  .how-it-works__t-shirt {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 65%;
+    left: 57%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__t-shirt:before {
+    width: 22px;
+    height: 22px
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .how-it-works__product-link:before {
+    background-size: 8px
+  }
+
+  .how-it-works__overview {
+    padding-right: 16px;
+    padding-left: 16px
+  }
+
+  .how-it-works__overview-title {
+    padding-right: 10px
+  }
+
+  .how-it-works__product-mug {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 17%;
+    left: 12.5%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-mug:before {
+    width: 18px;
+    height: 18px
+  }
+
+  .how-it-works__product-hat-1 {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 7%;
+    left: 71%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-hat-1:before {
+    width: 18px;
+    height: 18px
+  }
+
+  .how-it-works__product-phone {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 21%;
+    left: 43%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-phone:before {
+    width: 18px;
+    height: 18px
+  }
+
+  .how-it-works__product-hat-2 {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 67%;
+    left: 28%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-hat-2:before {
+    width: 18px;
+    height: 18px
+  }
+
+  .how-it-works__product-hoodie {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 93%;
+    left: 16%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__product-hoodie:before {
+    width: 18px;
+    height: 18px
+  }
+
+  .how-it-works__t-shirt {
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 65%;
+    left: 57%;
+    transform: translate(-50%, -50%)
+  }
+
+  .how-it-works__t-shirt:before {
+    width: 18px;
+    height: 18px
+  }
+}
+
+.swiper-wrapper {
+  display: flex;
+  height: inherit
+}
+
+.swiper {
+  --swiper-navigation-size: 14px;
+  --swiper-pagination-color: #29ab51;
+  --swiper-navigation-top-offset: calc(100% - 14px);
+  --swiper-navigation-color: #485256;
+  --swiper-navigation-sides-offset: 0px;
+  --swiper-pagination-bottom: 0px;
+  padding-bottom: 22px
+}
+
+.swiper-slide {
+  height: auto;
+  padding-bottom: 46px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.social-proof-wrapper {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 140px 24px 0
+}
+
+@media screen and (max-width: 960px) {
+  .social-proof-wrapper {
+    padding: 56px 24px 0
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-proof-wrapper {
+    padding-left: 0;
+    padding-right: 0
+  }
+}
+
+.social-proof {
+  background: #f7f7f7;
+  position: relative
+}
+
+.social-proof:after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  height: 64px;
+  background-color: #f7f7f7;
+  -webkit-mask-image: url(https://printify.com/pfh/media/arrow-down-S7NHO6CI.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(https://printify.com/pfh/media/arrow-down-S7NHO6CI.svg);
+  mask-repeat: no-repeat
+}
+
+@media screen and (max-width: 960px) {
+  .social-proof:after {
+    width: 112px;
+    height: 24px
+  }
+}
+
+.social-proof__description {
+  display: flex;
+  align-items: center
+}
+
+.social-proof__title,
+.social-proof__text {
+  width: 33%
+}
+
+.social-proof__title {
+  margin-right: 64px;
+  font-size: 40px;
+  line-height: 56px
+}
+
+.social-proof__text {
+  line-height: 24px;
+  color: #485256;
+  opacity: .7
+}
+
+.social-proof__slides {
+  padding-top: 72px;
+  padding-bottom: 80px
+}
+
+.social-proof__slide {
+  padding: 42px 40px 40px;
+  background: #fff;
+  box-shadow: 0 60px 34px #ededed2e;
+  border-radius: 20px
+}
+
+.social-proof__photo-details {
+  display: flex;
+  flex-wrap: wrap
+}
+
+.social-proof__author-photo {
+  width: 64px;
+  height: 64px;
+  margin-right: 25px;
+  border-radius: 9px;
+  background-size: 100% 100%
+}
+
+.social-proof__author-photo.robert-voltaire {
+  background-image: url(https://printify.com/pfh/media/robert-voltaire-RIZV7QXV.png)
+}
+
+.social-proof__author-photo.quinten-barney {
+  background-image: url(https://printify.com/pfh/media/quinten-barney-CHC7B3FG.png)
+}
+
+.social-proof__author-photo.nikki {
+  background-image: url(https://printify.com/pfh/media/nikki-TJP4NANB.png)
+}
+
+.social-proof__author-photo.spencer-brett-kyle {
+  background-image: url(https://printify.com/pfh/media/spencer-brett-kyle-NLHTAZDT.png)
+}
+
+.social-proof__author-photo.caner {
+  background-image: url(https://printify.com/pfh/media/caner-VWZECFKW.png)
+}
+
+.social-proof__author-photo.april-showers {
+  background-image: url(https://printify.com/pfh/media/april-showers-BCJ7SD2U.jpeg)
+}
+
+.social-proof__author-name {
+  font-size: 24px;
+  line-height: 32px;
+  color: #17262b
+}
+
+.social-proof__author-link:hover {
+  text-decoration: underline
+}
+
+.social-proof__author-link,
+.social-proof__store-name {
+  color: #29ab51
+}
+
+.social-proof__author-details {
+  flex: 1
+}
+
+.social-proof__star {
+  background: url(https://printify.com/pfh/media/star-S46SZESO.svg) no-repeat center center;
+  width: 18px;
+  height: 18px;
+  margin-right: 4px
+}
+
+.social-proof__star:last-child {
+  margin-right: 0
+}
+
+.social-proof__stars {
+  display: flex;
+  padding-top: 8px
+}
+
+.social-proof__comment {
+  font-size: 16px;
+  line-height: 24px;
+  color: #485256;
+  padding-top: 24px
+}
+
+.social-proof__controls {
+  padding-bottom: 86px
+}
+
+@media screen and (max-width: 960px) {
+  .social-proof__controls {
+    padding-bottom: 62px
+  }
+
+  .social-proof__description {
+    flex-direction: column;
+    text-align: center
+  }
+
+  .social-proof__title {
+    width: 100%;
+    font-size: 32px;
+    line-height: 40px;
+    margin-right: 0
+  }
+
+  .social-proof__text {
+    width: 100%;
+    padding: 24px 15%
+  }
+
+  .social-proof__feedbacks {
+    width: 100%;
+    padding: 0 10px;
+    max-width: 442px
+  }
+
+  .social-proof__slides {
+    padding-top: 8px;
+    padding-bottom: 30px
+  }
+
+  .social-proof__slide {
+    padding: 26px 20px 20px
+  }
+
+  .social-proof__author-name {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -.2px
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .social-proof__text {
+    padding: 24px 50px
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .social-proof__text {
+    padding-left: 0;
+    padding-right: 0
+  }
+
+  .social-proof__description {
+    text-align: left;
+    padding: 0 16px
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .social-proof__text {
+    padding-right: 10px
+  }
+}
+
+.swiper {
+  --swiper-navigation-size: 14px;
+  --swiper-pagination-color: #29ab51;
+  --swiper-navigation-top-offset: calc(100% - 19px);
+  --swiper-navigation-color: #485256;
+  --swiper-navigation-sides-offset: 0px;
+  padding-bottom: 82px
+}
+
+@media screen and (max-width: 960px) {
+  .swiper {
+    padding-bottom: 62px
+  }
+}
+
+.swiper-slide {
+  height: auto;
+  margin-top: 72px;
+  margin-bottom: 108px
+}
+
+@media screen and (max-width: 960px) {
+  .swiper-slide {
+    margin-top: 8px;
+    margin-bottom: 60px
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-banner-wrapper {
+  max-width: 1216px;
+  margin: 0 auto;
+  display: flex;
+  flex: 1;
+  padding: 56px 24px
+}
+
+@media screen and (max-width: 600px) {
+  .main-banner-wrapper {
+    flex-direction: column
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main-banner-wrapper {
+    padding-right: 0;
+    padding-left: 0
+  }
+}
+
+.main-banner {
+  max-width: 1280px;
+  padding: 0 32px;
+  margin: 0 auto;
+  background: url(https://printify.com/pfh/media/background-IAMAETLT.svg) no-repeat center right
+}
+
+.main-banner__description {
+  width: 40%;
+  align-self: center
+}
+
+.main-banner__description h1 {
+  font-size: 56px;
+  line-height: 72px;
+  color: #17262b
+}
+
+.main-banner__advantages {
+  padding-top: 8px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #485256
+}
+
+.main-banner__advantages li {
+  position: relative;
+  padding-top: 8px;
+  padding-left: 40px
+}
+
+.main-banner__advantages li:before {
+  content: "";
+  position: absolute;
+  background: url(https://printify.com/pfh/media/check-mark-EHPN4OB5.svg) no-repeat center center;
+  width: 17px;
+  height: 14px;
+  left: 3px;
+  top: 57%;
+  transform: translate(50%, -50%)
+}
+
+.main-banner__navigation {
+  display: flex;
+  padding-top: 48px
+}
+
+.main-banner__navigation .button-navigation {
+  height: 48px
+}
+
+.main-banner__navigation a:first-child button {
+  margin-right: 16px
+}
+
+.main-banner__navigation .button-start-selling {
+  padding: 12px 32px
+}
+
+.main-banner__navigation .button-with-icon {
+  padding: 0 24px
+}
+
+.main-banner__navigation .how-it-works-link {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  left: -3px;
+  width: 20px;
+  height: 20px;
+  background: url(https://printify.com/pfh/media/play-JMSHNOGL.svg) no-repeat center center
+}
+
+.main-banner__info {
+  color: #39b65e;
+  font-weight: 500;
+  margin-top: 1rem
+}
+
+.main-banner__picture {
+  flex: 1;
+  overflow: hidden;
+  padding-left: 20px;
+  max-width: 520px;
+  margin-left: auto;
+  height: 500px
+}
+
+.main-banner .how-it-works-popup {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background: #353a4780;
+  justify-content: center;
+  align-items: center
+}
+
+.main-banner .how-it-works-popup .popup-content {
+  position: relative;
+  background: #fff;
+  margin: 0 10px;
+  width: 100%;
+  max-width: 728px
+}
+
+.main-banner .how-it-works-popup #close-popup {
+  cursor: pointer;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  right: 9px;
+  top: -38px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="5 5 14 14" fill="hsla(0, 0%, 93.3%, 0.9)"><path d="M18.717 6.697l-1.414-1.414L12 10.586 6.697 5.283 5.283 6.697 10.586 12l-5.303 5.303 1.414 1.414L12 13.414l5.303 5.303 1.414-1.414L13.414 12z"/></svg>")
+}
+
+.main-banner .how-it-works-popup #close-popup:hover {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="5 5 14 14" fill="white"><path d="M18.717 6.697l-1.414-1.414L12 10.586 6.697 5.283 5.283 6.697 10.586 12l-5.303 5.303 1.414 1.414L12 13.414l5.303 5.303 1.414-1.414L13.414 12z"/></svg>")
+}
+
+.main-banner .how-it-works-popup .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0
+}
+
+.main-banner .how-it-works-popup .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000
+}
+
+.main-banner .how-it-works-popup #popup-blocker {
+  position: absolute;
+  inset: 0
+}
+
+@media screen and (max-width: 960px) {
+  .main-banner__description {
+    align-self: flex-start;
+    width: 345px;
+    z-index: 3
+  }
+
+  .main-banner__description h1 {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    color: #17262b;
+    padding-right: 30px
+  }
+
+  .main-banner__advantages {
+    padding-top: 16px
+  }
+
+  .main-banner__navigation {
+    padding-top: 40px
+  }
+
+  .main-banner .how-it-works-popup .popup-content {
+    padding: 16px;
+    max-width: 530px;
+    width: 100%
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main-banner {
+    background-position: 145px 100%
+  }
+
+  .main-banner__picture {
+    width: 100%;
+    padding: 20px;
+    margin-left: initial
+  }
+
+  .main-banner__description h1 {
+    padding-right: 27%
+  }
+
+  .main-banner__advantages li {
+    padding-left: 32px
+  }
+
+  .main-banner__advantages li:before {
+    left: -5px
+  }
+
+  .main-banner__navigation a:first-child button {
+    margin-right: 11px
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-banner__navigation {
+    padding-top: 24px
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main-banner__description {
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px
+  }
+
+  .main-banner__navigation {
+    display: flex;
+    flex-direction: column
+  }
+
+  .main-banner__navigation button {
+    width: 100%
+  }
+
+  .main-banner .button-with-icon {
+    margin-top: 16px;
+    padding: 0
+  }
+}
